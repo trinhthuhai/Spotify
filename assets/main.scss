@@ -1,0 +1,295 @@
+@import "reset";
+
+$primary-color: #fff;
+$back-color: #000;
+
+header {
+    height: 80px;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+    position: fixed;
+    z-index: 5;
+
+    .navbar {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+
+        &__logo {
+            width: 132px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            margin-right: 320px;
+
+            &-img {
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+
+        &-list {
+            width: 500px;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .navbar-item {
+
+                a {
+                    color: $primary-color;
+                    font-weight: 600;
+                    font-size: 16px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: #1ed760;
+                    }
+                }
+
+                &__download {
+
+                    border-right: 1px solid $primary-color;
+                    padding-right: 36px;
+                }
+            }
+        }
+    }
+}
+
+.contain {
+
+    &__img {
+        height: 100vh;
+        background-color: rgb(41, 65, 171);
+        background-image: url(https://www-growth.scdn.co/static/home/bursts.svg);
+        background-position: 46% 4%;
+        background-repeat: no-repeat;
+        background-size: 175%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .contain__content {
+            flex-wrap: wrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 950px;
+            line-height: 164px;
+
+            .contain__content-heading {
+                font-size: 156px;
+                font-weight: 700;
+                color: #1ed760;
+                letter-spacing: -8px;
+                text-align: center;
+                margin: 76px 0 0;
+            }
+
+            .contain__content-sub-heading {
+                font-size: 16px;
+                color: #1ed760;
+                font-weight: 500;
+                line-height: 18px;
+                margin: 40px 0 42px;
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+            }
+
+            .contain__content-btn {
+                background-color: #1ed760;
+                color: rgb(41, 65, 171);
+                padding: 16px 35px;
+                border-radius: 30px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                will-change: opacity, transform;
+                margin-bottom: 122px;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #2DE26D;
+                    animation: btnGrowth linear 0.1s;
+                    transform-origin: center;
+                }
+
+                &:focus {
+                    outline: 4px solid rgb(41, 65, 171);
+                    box-shadow: 0 0 0 6px $primary-color;
+                }
+            }
+        }
+    }
+}
+
+@keyframes btnGrowth {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.footer {
+    background-color: #000;
+
+    &-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 100px 0;
+
+        .footer__brand {
+            width: 132px;
+            display: flex;
+            align-items: center;
+
+            .footer__brand-img {
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+
+        .footer-nav {
+
+            padding-top: 25px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+            margin-left: -228px;
+
+            .footer-content {
+                position: relative;
+                max-width: 500px;
+                line-height: 18px;
+                margin-left: 66px;
+
+                span {
+                    color: #919496;
+                    font-weight: 600;
+                    padding: 0;
+                    font-size: 1.4rem;
+                }
+
+                .footer-link {
+                    a {
+                        color: $primary-color;
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        line-height: 4rem;
+                        font-family: Arial, Helvetica, sans-serif;
+
+                        &:hover {
+                            color: #1ed760;
+                        }
+                    }
+
+                    .footer-link__mobile-application {
+                        max-width: 132px;
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+
+
+                }
+            }
+
+
+        }
+
+        .footer-social {
+
+            display: inline-flex;
+
+            &__instagram {
+                border-radius: 50%;
+                background-color: #222326;
+                padding: 14px 15px;
+                margin-right: 12px;
+
+            }
+
+            &__twitter {
+                border-radius: 50%;
+                background-color: #222326;
+                padding: 14px 14px;
+                margin-right: 12px;
+            }
+
+            &__facebook {
+                border-radius: 50%;
+                background-color: #222326;
+                padding: 14px 19px;
+            }
+
+            a {
+                color: $primary-color;
+                font-size: 24px;
+
+                &:hover {
+                    color: #1ed760;
+                }
+            }
+        }
+    }
+
+    &-language {
+        display: flex;
+        justify-content: flex-end;
+        width: 1114px;
+        margin: 0 auto;
+
+        &__language {
+
+            color: $primary-color;
+        }
+    }
+
+    .footer-operator {
+
+        display: flex;
+        justify-content: space-between;
+        width: 1114px;
+        margin: 0 auto;
+        padding-bottom: 64px;
+
+        &__footer {
+
+            display: flex;
+            justify-content: space-between;
+            width: 536px;
+
+            .footer-sub-content {
+
+                a {
+                    color: #919496;
+                    font-size: 1.2rem;
+                }
+
+            }
+
+        }
+
+        .footer__copyright {
+
+            span {
+                color: $primary-color;
+                display: inline-block;
+            }
+        }
+    }
+}
